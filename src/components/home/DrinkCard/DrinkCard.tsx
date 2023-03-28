@@ -11,10 +11,10 @@ const Drinkcard: FC<Props> = ({ drink }) => {
   const { strDrink, strDrinkThumb } = drink;
   return (
     <div className={css.cardContainer}>
-      <div className={css.title}>{strDrink}</div>
       <div className={css.imageContainer}>
         <Image src={strDrinkThumb} fill className={css.image} alt={strDrink} />
       </div>
+      <div className={css.title}>{strDrink}</div>
     </div>
   );
 };

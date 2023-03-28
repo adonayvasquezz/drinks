@@ -1,10 +1,7 @@
 import Head from "next/head";
 import { GetStaticProps, NextPage } from "next";
-import { Inter } from "next/font/google";
 import { IDrinkProp } from "@/interfaces/IDrink";
 import DrinkList from "@/components/home/DrinkList/DrinkList";
-
-const inter = Inter({ subsets: ["latin"] });
 
 const Home: NextPage<IDrinkProp> = ({ drinks }) => {
   return (

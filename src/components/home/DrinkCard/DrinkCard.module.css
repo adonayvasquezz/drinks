@@ -1,32 +1,34 @@
 .cardContainer {
     width: 100%;
+    transition: background-color 1s;
 }
 
 .cardContainer:hover {
     cursor: pointer;
+    background-color: rgb(146, 4, 4);
 }
 
 .imageContainer {
     display: block;
     position: relative;
     width: 100%;
-    height: 12rem;
+    height: 15rem;
 }
 
 .image {
     object-fit: cover;
+    transition: opacity 1s,
 }
 
 .image:hover {
     opacity: 0.8;
 }
 
-
 .title {
     color: white;
-    display: flex;
-    justify-content: center;
-    padding-top: 0.5rem;
+    text-align: center;
+    padding: 0.8rem 0;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    height: max-content;
 }
