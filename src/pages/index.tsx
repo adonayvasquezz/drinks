@@ -1,10 +1,12 @@
 import Head from "next/head";
+import { GetStaticProps, NextPage } from "next";
 import { Inter } from "next/font/google";
-import CocktailsList from "@/components/home/CocktailsList/CocktailsList";
+import { IDrinkProp } from "@/interfaces/IDrink";
+import DrinkList from "@/components/home/DrinkList/DrinkList";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+const Home: NextPage<IDrinkProp> = ({ drinks }) => {
   return (
     <>
       <Head>
@@ -14,7 +16,22 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <CocktailsList />
+      <DrinkList drinks={drinks} />
     </>
   );
-}
+};
+
+export const getStaticProps: GetStaticProps = async (ctx) => {
+  const alcoholicDrinks = `${process.env.API_URL}/filter.php?a=Alcoholic`;
+  const res = await fetch(alcoholicDrinks);
+  const data = await res.json();
+  const drinks = data.drinks;
+
+  return {
+    props: {
+      drinks: drinks,
+    },
+  };
+};
+
+export default Home;
