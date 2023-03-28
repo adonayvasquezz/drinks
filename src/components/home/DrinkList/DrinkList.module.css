@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 10%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 16vw 16vw 16vw 16vw;
+    gap: 1.2rem
+}
+
+@media only screen and (max-width: 600px) {
+    .grid {
+        grid-template-columns: 100%;
+    }
+}
