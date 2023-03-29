@@ -1,7 +1,10 @@
-import React from "react";
+import React, { FC } from "react";
 
-const DrinkDetails = () => {
-  return <div>DrinkDetails</div>;
+interface Props {
+  drink: any;
+}
+const DrinkDetails: FC<Props> = ({ drink }) => {
+  return <div>{drink.strDrink}</div>;
 };
 
 export default DrinkDetails;

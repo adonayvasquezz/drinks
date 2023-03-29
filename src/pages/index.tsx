@@ -19,8 +19,8 @@ const Home: NextPage<IDrinkProp> = ({ drinks }) => {
 };
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  const alcoholicDrinks = `${process.env.API_URL}/filter.php?a=Alcoholic`;
-  const res = await fetch(alcoholicDrinks);
+  const drinksAPI = `${process.env.API_URL}/filter.php?a=Alcoholic`;
+  const res = await fetch(drinksAPI);
   const data = await res.json();
   const drinks = data.drinks;
 
