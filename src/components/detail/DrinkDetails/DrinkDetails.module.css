@@ -1,0 +1,12 @@
+.imageContainer {
+    display: block;
+    margin: auto;
+    position: relative;
+    width: 25vw;
+    height: 25rem;
+}
+
+.image {
+    object-fit: cover;
+    transition: opacity 1s,
+}
