@@ -1,12 +1,51 @@
+.container {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
 .imageContainer {
     display: block;
     margin: auto;
     position: relative;
-    width: 25vw;
+    width: 80%;
     height: 25rem;
 }
 
 .image {
-    object-fit: cover;
+    object-fit: contain;
     transition: opacity 1s,
 }
+
+
+
+@media only screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: 100%;
+        row-gap: 2.5rem;
+    }
+
+    .imageContainer {
+        width: 80%;
+        height: 20rem;
+    }
+}
+
+/* @media only screen and (min-width: 600px) {} */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .container {
+        grid-template-columns: 100%;
+        row-gap: 2.5rem;
+    }
+
+    .imageContainer {
+        width: 80%;
+        height: 20rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (min-width: 992px) {}
+
+@media only screen and (min-width: 1200px) {}

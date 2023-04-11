@@ -3,7 +3,6 @@ import DrinkDetails from "@/components/detail/DrinkDetails/DrinkDetails";
 import DrinksLayout from "@/components/shared/layouts/DrinksLayout";
 
 const drink: NextPage = (props: any) => {
-  console.log("en clientye", props.drink);
   return (
     <>
       <DrinksLayout title="Drinks" pageDescription="Cocktail description">

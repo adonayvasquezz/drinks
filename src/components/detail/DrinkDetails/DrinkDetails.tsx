@@ -20,7 +20,7 @@ const DrinkDetails: FC<Props> = ({ drink }) => {
   }, [drink]);
 
   return (
-    <>
+    <div className={css.container}>
       <div className={css.imageContainer}>
         <Image
           src={drink.strDrinkThumb}
@@ -44,7 +44,7 @@ const DrinkDetails: FC<Props> = ({ drink }) => {
             ingredients.map((el: any) => <li key={el[0]}>{el[1]}</li>)}
         </ul>
       </div>
-    </>
+    </div>
   );
 };
 
